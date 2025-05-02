@@ -4,53 +4,55 @@ import { faMouse } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="relative  text-white bg-gray-100 ">
-    <div className=" absolute top-0 right-[49%]">
-    <a href="/"><FontAwesomeIcon icon={faMouse} size="lg" className="text-red-500 text-4xl animate-bounce" /></a>
-          
-    </div>
-      {/* Wave Shape Divider */}
-      <div className="custom-shape-divider-bottom-1736492468">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z" className="shape-fill"></path>
-    </svg>
-</div>
+    <div className="relative">
+      {/* Bounce Mouse Icon */}
+      <div className="absolute top-[-2] right-[49%] z-20">
+        <a href="/">
+          <FontAwesomeIcon
+            icon={faMouse}
+            size="lg"
+            className="text-cyan-500 text-4xl animate-bounce drop-shadow-[0_0_16px_cyan]"
+          />
+        </a>
+      </div>
 
-      {/* Footer Content */}
-      <footer className="px-8 bg-[#969493] py-6 md:py-5 text-center">
-        <h3 className="text-lg md:text-2xl font-semibold mb-2 font-mono">
-          Made with ❤️ by Siraz
+      {/* Neon Footer Content */}
+      <footer className="px-8 py-8  text-center bg-[#0f0c29] text-white border-t border-cyan-500">
+        <h3 className="text-lg md:text-2xl font-semibold mb-2 font-mono text-cyan-500 drop-shadow-[0_0_16px_cyan]">
+        Juhi Sabnam Sarkar
         </h3>
-        <p className="text-sm md:text-base text-black mb-4">
+
+        <p className="text-sm md:text-base text-cyan-100  font-mono">
           © {new Date().getFullYear()} All Rights Reserved.
         </p>
-        <div className="flex justify-center space-x-4">
-          {/* Social Media Links */}
+
+        {/* <div className="flex justify-center space-x-6 mt-4">
+      
           <a
             href="https://github.com/your-profile"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-300"
+            className="text-white hover:text-cyan-300 transition-transform transform hover:scale-110 drop-shadow-[0_0_5px_cyan]"
           >
-            <i className="fab fa-github text-xl"></i>
+            <i className="fab fa-github text-2xl"></i>
           </a>
           <a
             href="https://linkedin.com/in/your-profile"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-300"
+            className="text-white hover:text-cyan-300 transition-transform transform hover:scale-110 drop-shadow-[0_0_5px_cyan]"
           >
-            <i className="fab fa-linkedin text-xl"></i>
+            <i className="fab fa-linkedin text-2xl"></i>
           </a>
           <a
             href="https://twitter.com/your-profile"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-300"
+            className="text-white hover:text-cyan-300 transition-transform transform hover:scale-110 drop-shadow-[0_0_5px_cyan]"
           >
-            <i className="fab fa-twitter text-xl"></i>
+            <i className="fab fa-twitter text-2xl"></i>
           </a>
-        </div>
+        </div> */}
       </footer>
     </div>
   );

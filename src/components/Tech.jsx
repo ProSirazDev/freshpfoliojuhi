@@ -9,62 +9,78 @@ import {
   faGitAlt,
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
-import "./Latestwork.css";
+import { motion } from "framer-motion";
 
 const Tech = () => {
   const technologies = [
-    { icon: faHtml5, color: "text-orange-500", name: "HTML5" },
-    { icon: faCss3Alt, color: "text-blue-500", name: "CSS3" },
-    { icon: faJs, color: "text-yellow-500", name: "JavaScript" },
-    { icon: faReact, color: "text-blue-400", name: "React" },
-    { icon: faNodeJs, color: "text-green-500", name: "Node.js" },
-    { icon: faGitAlt, color: "text-red-500", name: "Git" },
-    { icon: faBootstrap, color: "text-violet-500", name: "Bootstrap" },
+    { icon: faHtml5, name: "HTML5" },
+    { icon: faCss3Alt, name: "CSS3" },
+    { icon: faJs, name: "JavaScript" },
+    { icon: faReact, name: "React" },
+    { icon: faNodeJs, name: "Node.js" },
+    { icon: faGitAlt, name: "Git" },
+    { icon: faBootstrap, name: "Bootstrap" },
+    { icon: faBootstrap, name: "Tailwind CSS" },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="relative bg-gray-100 z-10">
-      {/* Shape Divider */}
-      <div className="custom-shape-divider-top-1736490416">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z"
-            className="shape-fill"
-          ></path>
-        </svg>
-      </div>
+    <div className="bg-[#e0e0e0]  text-gray-800 py-16">
+      <h1 className="text-xl font-semibold text-center text-sky-800 drop-shadow-[0_0_6px_sky] mb-16">
+      &#x2688; &#x2688; &#x2688; Technologies I am in love with &#x2688; &#x2688; &#x2688;
+      </h1>
 
-      {/* Title Section */}
-      <div className="w-full flex items-center justify-center my-8">
-        <div className="bg-red-800 h-[2px] w-1/3"></div>
-        <h1 className="text-center text-3xl font-mono py-2 px-4">
-          Technology I am in love with ❤
-        </h1>
-        <div className="bg-red-800 h-[2px] w-1/3"></div>
-      </div>
-
-      {/* Icons Section */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto p-6 pb-20">
+      <motion.div
+        className="grid grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto px-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {technologies.map((tech, index) => (
-          <div
+          <motion.div
             key={index}
-            className="flex flex-col items-center space-y-2 group"
+            className="flex flex-col items-center space-y-3 group"
+            variants={itemVariants}
           >
-            <div className="rounded-full shadow-lg p-5 bg-white transform transition-transform duration-300 group-hover:scale-110">
+            <motion.div
+              className="rounded-xl p-5 bg-[#e0e0e0]
+                         shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff]
+                         hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
+                         transition duration-300 ease-in-out"
+              whileHover={{
+                scale: 1.2,
+                rotate: 10,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <FontAwesomeIcon
                 icon={tech.icon}
-                className={`${tech.color} text-4xl`}
+                className="text-3xl md:text-4xl text-gray-800"
               />
-            </div>
-            <p className="text-lg font-semibold">{tech.name}</p>
-          </div>
+            </motion.div>
+            <p className="text-base md:text-lg font-medium">{tech.name}</p>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
