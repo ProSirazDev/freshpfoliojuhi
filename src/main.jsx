@@ -1,10 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+// Hide the loader after React app mounts
+const hideLoader = () => {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.classList.add("hidden"); // Add the "hidden" class to hide the loader
+  }
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>
+);
+
+// Wait for React to render before hiding the loader
+hideLoader();

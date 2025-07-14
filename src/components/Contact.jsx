@@ -1,89 +1,137 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhoneAlt, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen py-12 px-4 md:px-24 pt-36 bg-black text-white">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         {/* Heading */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-800 mb-4 font-mono">Get in Touch</h1>
-          <p className="text-gray-600 text-lg font-medium">
+          <motion.h1
+            className="text-3xl font-semibold mb-4 "
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Get in Touch
+          </motion.h1>
+          <motion.p
+            className=" text-white dark:text-gray-300 text-base font-medium"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             We’d love to hear from you! Whether you have a question or just want to say hello.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Contact Info Section */}
-          <div className="bg-white shadow-lg rounded-lg p-8 bg-cover bg-center">
-            {/* <h2 className="text-2xl  text-gray-800 mb-6 font-mono font-bold">Contact Information</h2>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <FontAwesomeIcon icon={faEnvelope} className="text-blue-500 text-2xl" />
-                <span className="text-gray-700 text-lg">email@example.com</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <FontAwesomeIcon icon={faPhoneAlt} className="text-green-500 text-2xl" />
-                <span className="text-gray-700 text-lg">+1 234 567 890</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <FontAwesomeIcon icon={faMapMarkerAlt} className="text-red-500 text-2xl" />
-                <span className="text-gray-700 text-lg">123 Main Street, City, Country</span>
-              </div>
-            </div> */}
+        {/* Main Content */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {/* Contact Image */}
+          <motion.div
+            className="rounded-xl p-4  shadow-[2px_2px_2px_#06b6d4,-2px_-2px_4px_#0891b2]"
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <img
-            src="https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?t=st=1736573757~exp=1736577357~hmac=79274f99cea2c8e7b38642d084fb6bbb031b36a37cd993e233aa86e9db655f50&w=740"
-            alt=""
-            className=""
-          />
-          </div>
+              src="https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg"
+              alt=""
+              className="rounded-xl shadow-md"
+            />
+          </motion.div>
 
           {/* Contact Form */}
-          <form className="bg-white shadow-lg rounded-lg p-8 space-y-6">
-            <h2 className="text-2xl text-gray-800 font-bold font-mono">Send Us a Message</h2>
+          <motion.form
+            className="rounded-xl p-8  shadow-[2px_2px_2px_#06b6d4,-2px_-2px_4px_#0891b2] space-y-6"
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.h2
+              className="text-2xl font-semibold  mb-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Send a message
+            </motion.h2>
+
+            {/* Name */}
             <div>
-              <label htmlFor="name" className="block text-gray-600 font-medium mb-1">
+              <label htmlFor="name" className="block font-medium mb-1">
                 Name
               </label>
-              <input
+              <motion.input
                 type="text"
                 id="name"
                 placeholder="Your Name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg bg-[#e0e0e0] text-gray-800
+                           shadow-[inset_4px_4px_8px_#bebebe,inset_-4px_-4px_8px_#ffffff]
+                           focus:outline-none focus:ring-2 focus:ring-blue-400"
+                whileFocus={{ scale: 1.01 }}
               />
             </div>
+
+            {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-gray-600 font-medium mb-1">
+              <label htmlFor="email" className="block font-medium mb-1">
                 Email
               </label>
-              <input
+              <motion.input
                 type="email"
                 id="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg bg-[#e0e0e0] text-gray-800
+                           shadow-[inset_4px_4px_8px_#bebebe,inset_-4px_-4px_8px_#ffffff]
+                           focus:outline-none focus:ring-2 focus:ring-blue-400"
+                whileFocus={{ scale: 1.01 }}
               />
             </div>
+
+            {/* Message */}
             <div>
-              <label htmlFor="message" className="block text-gray-600 font-medium mb-1">
+              <label htmlFor="message" className="block font-medium mb-1">
                 Message
               </label>
-              <textarea
+              <motion.textarea
                 id="message"
                 rows="5"
                 placeholder="Your Message"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg bg-[#e0e0e0] text-gray-800
+                           shadow-[inset_4px_4px_8px_#bebebe,inset_-4px_-4px_8px_#ffffff]
+                           focus:outline-none focus:ring-2 focus:ring-blue-400"
+                whileFocus={{ scale: 1.01 }}
               />
             </div>
-            <button
+
+            {/* Submit Button */}
+            <motion.button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 rounded-lg shadow-md hover:from-purple-500 hover:to-blue-500 transition-all"
+              className="w-full text-gray-800 font-semibold py-3 rounded-xl
+                         bg-[#e0e0e0]  shadow-[4px_4px_8px_#06b6d4,-4px_-4px_8px_#0891b2]
+                         hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
+                         transition duration-300 ease-in-out"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
             >
               Send Message
-            </button>
-          </form>
-        </div>
-      </div>
+            </motion.button>
+          </motion.form>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

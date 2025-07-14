@@ -1,19 +1,50 @@
-.custom-shape-divider-top-1736490416 {
-   
-    
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-  
-  .custom-shape-divider-top-1736490416 svg {
-  
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
-  }
-  
-  .custom-shape-divider-top-1736490416 .shape-fill {
-    fill: #aca8a6;
-  }
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  z-index: 2;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+
+/* Assigning hover classes manually since Tailwind doesn't support hover targets */
+.hovered-left:hover {
+  width: 50% !important;
+}
+.group:hover .hovered-left:not(:hover) {
+  width: 25% !important;
+}
+
+.hovered-right:hover {
+  width: 50% !important;
+}
+.group:hover .hovered-right:not(:hover) {
+  width: 25% !important;
+}
