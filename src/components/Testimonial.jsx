@@ -54,8 +54,8 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <div className="py-16 px-6 sm:px-12 md:px-20 bg-black ">
-      <h2 className="text-xl font-semibold text-center text-white drop-shadow-[0_0_6px_sky] mb-16">
+    <div className="py-16 px-6 sm:px-0 bg-black ">
+      <h2 className="text-md sm:text-xl font-semibold text-center text-white drop-shadow-[0_0_6px_sky] mb-16">
       &#x2688; &#x2688; &#x2688; Testimonials &#x2688; &#x2688; &#x2688;
       </h2>
       <motion.div
@@ -63,7 +63,7 @@ const Testimonial = () => {
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
-          className="flex gap-6 p-6"
+          className="flex  gap-6 p-6"
           drag="x"
           dragConstraints={{ left: -600, right: 0 }}
         >

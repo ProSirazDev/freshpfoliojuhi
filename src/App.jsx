@@ -48,10 +48,10 @@ function App() {
 
   return (
     <>
-      <div className={`dark:bg-slate-900 bg-black`}>
+      <div className={`dark:bg-slate-900  bg-black w-full overflow-x-hidden  `}>
         <Router>
-          <div className="relative min-h-screen flex flex-col ">
-           <MouseEffect />
+          <div className="relative  ">
+          <div className="hidden sm:block"> <MouseEffect  /></div>
             {/* Navbar */}
             <Navbar />
 
@@ -70,12 +70,12 @@ function App() {
             </button> */}
 
             {/* Social Links - Fixed position */}
-            <div className="fixed top-[35%] right-0 z-50">
+            <div className="fixed top-[60%] sm:top-[35%] left-0 sm:right-0 z-50">
               <Social />
             </div>
 
             {/* Main Content */}
-            <div className="flex-grow">
+            <div className=" max-w-7xl mx-auto">
               <Routes>
                 <Route
                   path="/"

@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Intro = () => {
   return (
-    <div className="w-full flex items-center justify-center pt-16 md:pt-24 bg-black">
+    <div className="max-w-full mx-auto flex items-center justify-center pt-16 md:pt-24 bg-black">
       {/* Left Section with Typing Effect */}
       <div className="relative z-10 px-5 md:py-20 text-center">
         {/* Typing Effect for "Hi, I am Siraz" */}

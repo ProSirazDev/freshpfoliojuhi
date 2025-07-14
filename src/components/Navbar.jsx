@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black fixed top-0 w-full z-50 shadow-md  border-cyan-500">
+    <nav className="sm:bg-black !bg-gray-800 fixed top-0 right-0  w-full z-50 shadow-md  border-cyan-500">
       <div className="container mx-auto p-2 md:px-0 flex justify-between items-center text-white">
         {/* Logo Section */}
         <a href="/">

@@ -45,12 +45,12 @@ const technologies = [
 
   return (
     <div className="bg-black  text-gray-800 py-16">
-      <h1 className="text-xl font-semibold text-center text-white drop-shadow-[0_0_6px_sky] mb-16">
+      <h1 className=" text-md sm:text-xl font-semibold text-center text-white drop-shadow-[0_0_6px_sky] mb-16">
       &#x2688; &#x2688; &#x2688; Technologies I am in love with &#x2688; &#x2688; &#x2688;
       </h1>
 
       <motion.div
-        className="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto px-6"
+        className="grid grid-cols-3 md:grid-cols-5 gap-6 sm:max-w-5xl mx-auto px-6"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -63,7 +63,7 @@ const technologies = [
     variants={itemVariants}
   >
     <motion.div
-      className="rounded-xl p-5 bg-[#e0e0e0]
+      className="rounded-xl sm:p-5 p-3 bg-[#e0e0e0]
                  shadow-[4px_4px_8px_#06b6d4,-4px_-4px_8px_#0891b2]
                  hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
                  transition duration-300 ease-in-out"
@@ -73,11 +73,11 @@ const technologies = [
     >
       <FontAwesomeIcon
         icon={tech.icon}
-        className="text-3xl md:text-4xl"
+        className="sm:text-3xl text-2xl md:text-4xl"
         style={{ color: tech.color }}
       />
     </motion.div>
-    <p className="text-base text-white md:text-lg font-medium">{tech.name}</p>
+    <p className="text-xs sm:text-base text-white md:text-lg font-medium">{tech.name}</p>
   </motion.div>
 ))}
 
