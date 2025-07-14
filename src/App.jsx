@@ -70,7 +70,8 @@ function App() {
             </button> */}
 
             {/* Social Links - Fixed position */}
-            <div className="fixed top-[60%] sm:top-[35%] left-0 sm:right-0 z-50">
+           <div className="fixed top-[60%] sm:top-[35%] left-0 sm:left-auto sm:right-0 z-50">
+
               <Social />
             </div>
 
