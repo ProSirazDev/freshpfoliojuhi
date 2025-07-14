@@ -11,7 +11,7 @@ const Social = () => {
   return (
     <div className="bg-gray-800 rounded-xl w-12 h-auto flex flex-col items-center py-4 space-y-6 z-50  shadow-[0_0_15px_stone, 0_0_30px_#0ff1]">
       <a
-        href="https://github.com/your-profile"
+        href="https://github.com/SabnamJuhi"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-transform duration-200 hover:scale-110"
@@ -29,7 +29,7 @@ const Social = () => {
       >
         <FontAwesomeIcon
           icon={faWhatsapp}
-          className="text-[#25D366] text-3xl hover:drop-shadow-[0_0_6px_#25D366]"
+          className="text-green-600 text-3xl hover:drop-shadow-[0_0_6px_#25D366]"
         />
       </a>
       <a
@@ -40,11 +40,11 @@ const Social = () => {
       >
         <FontAwesomeIcon
           icon={faInstagram}
-          className="text-red-500 text-3xl hover:drop-shadow-[0_0_6px_#ff00ff]"
+          className="text-pink-600 text-3xl hover:drop-shadow-[0_0_6px_#ff00ff]"
         />
       </a>
       <a
-        href="https://facebook.com/your-profile"
+        href="https://www.facebook.com/juhi.sabnamsarkar"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-transform duration-200 hover:scale-110"

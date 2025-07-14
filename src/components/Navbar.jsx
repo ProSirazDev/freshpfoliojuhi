@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     <nav className="bg-black fixed top-0 w-full z-50 shadow-md  border-cyan-500">
-      <div className="container mx-auto p-3 md:px-0 flex justify-between items-center text-white">
+      <div className="container mx-auto p-2 md:px-0 flex justify-between items-center text-white">
         {/* Logo Section */}
-        <Link to="/">
+        <a href="/">
           <div className="flex items-center space-x-3">
             <img
               src='https://media.licdn.com/dms/image/v2/D5603AQFslPnxb4JlEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719834686015?e=1758153600&v=beta&t=3XjzSh_ecsofdTuCdsUHx356WzcgCLx7UdaZLXz1bKM'
@@ -21,10 +21,10 @@ const Navbar = () => {
               className="md:w-14 md:h-14 w-10 h-10 rounded-full bg-white"
             />
           </div>
-        </Link>
+        </a>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex space-x-6 font-mono text-base bg-gray-800 p-5 rounded-full">
+        <div className="hidden md:flex space-x-6 font-mono text-base bg-gray-800 p-3 rounded-full">
           {[ 
             { to: "/", label: "Home" },
             { to: "/about", label: "About" },
@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link
               key={to}
               to={to}
-              className="px-5 py-2 rounded-lg text-cyan-300 border border-cyan-500 hover:bg-cyan-500 hover:text-black transition duration-300 ease-in-out shadow-[0_0_10px_cyan] hover:shadow-[0_0_20px_cyan]"
+              className="px-5 py-1 rounded-lg text-cyan-300 border border-cyan-500 hover:bg-cyan-500 hover:text-black transition duration-300 ease-in-out shadow-[0_0_10px_cyan] hover:shadow-[0_0_20px_cyan]"
             >
               {label}
             </Link>

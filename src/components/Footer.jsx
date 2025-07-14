@@ -4,7 +4,7 @@ import { faMouse } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="relative">
+    <div className="relative bg-gray-800">
       {/* Bounce Mouse Icon */}
       <div className="absolute top-[-2] right-[49%] z-20">
         <a href="/">
@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
 
       {/* Neon Footer Content */}
-      <footer className="px-8 py-8  text-center bg-black text-white ">
+      <footer className="px-8 pt-8 pb-3  text-center bg-gray-800 text-white ">
         <h3 className="text-lg md:text-2xl font-semibold mb-2 font-mono text-cyan-500 ">
         Juhi Sabnam Sarkar
         </h3>

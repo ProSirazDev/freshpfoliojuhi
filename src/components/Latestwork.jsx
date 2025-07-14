@@ -19,6 +19,7 @@ const projects = [
     video: video1,
     tech: ["html5", "css3", "angular"],
     link: "https://www.emporium.ae/pages/default",
+    status: "Completed"
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ const projects = [
     video: video2,
     tech: ["html5", "css3", "react"],
     link: "http://192.168.1.6:5173/inprogress",
+    status: "Inprogress"
   },
   {
     id: 3,
@@ -35,6 +37,7 @@ const projects = [
     video: video3,
     tech: ["html5", "css3", "react"],
     link: "https://your-portfolio-demo.com",
+    status: "Completed"
   },
 ];
 
@@ -82,7 +85,7 @@ const Latestwork = () => {
   );
 };
 
-const Card = ({ title, description, video, tech, link }) => {
+const Card = ({ title, description, video, tech, link,status }) => {
   return (
     <div className="bg-gray-800  overflow-hidden h-full border-r-8 border-slate-900">
       <video autoPlay loop muted className="w-full h-64 object-cover ">
@@ -105,7 +108,7 @@ const Card = ({ title, description, video, tech, link }) => {
           className="inline-block mt-4 px-4 py-2 text-sm font-semibold bg-[#e0e0e0] rounded text-red-500
           "
         >
-          Inprogress
+         {status}
         </p>
                 <a
           href={link}

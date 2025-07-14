@@ -10,17 +10,20 @@ import {
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 const Tech = () => {
- const technologies = [
-  { icon: faHtml5, name: "HTML5", color: "#e34c26" },
-  { icon: faCss3Alt, name: "CSS3", color: "#264de4" },
-  { icon: faJs, name: "JavaScript", color: "#eab308" },
-  { icon: faReact, name: "React", color: "#61dafb" },
-  { icon: faNodeJs, name: "Node.js", color: "#3c873a" },
-  { icon: faGitAlt, name: "Git", color: "#f1502f" },
-  { icon: faBootstrap, name: "Bootstrap", color: "#7952b3" },
-  { icon: faBootstrap, name: "Tailwind CSS", color: "#38bdf8" },
+const technologies = [
+  { icon: faHtml5, name: "HTML5", color: "#c14424" },         // deeper orange-red
+  { icon: faCss3Alt, name: "CSS3", color: "#1d4ed8" },         // Tailwind blue-600
+  { icon: faJs, name: "JavaScript", color: "#ca8a04" },        // Tailwind yellow-600
+  { icon: faReact, name: "React", color: "#0284c7" },          // Tailwind cyan-600
+  { icon: faNodeJs, name: "Node.js", color: "#2f5d2f" },       // darker green
+  { icon: faGitAlt, name: "Git", color: "#c2410c" },           // deep orange
+  { icon: faBootstrap, name: "Bootstrap", color: "#5b2b82" },  // deep purple
+  { icon: faBootstrap, name: "Tailwind CSS", color: "#0e7490" }, // Tailwind cyan-700
+  { icon: faDatabase, name: "PostgreSQL", color: "#1d4ed8" },  // Tailwind blue-600
+  { icon: faDatabase, name: "MongoDB", color: "#065f46" },     // Tailwind emerald-700
 ];
 
 
@@ -47,7 +50,7 @@ const Tech = () => {
       </h1>
 
       <motion.div
-        className="grid grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto px-6"
+        className="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto px-6"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
